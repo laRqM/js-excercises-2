@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Exercises</title>
+    <meta name="description" content="JavaScript exercises to manipulate the DOM">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="network-status" id="div-network"></div>
+    <div id="menu-offcanvas" class="offcanvas">
+        <a class="closebtn" id="close-menu-button">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <div class="offcanvas-content">
+            <a class="nav-link" href="#section_1">Digital clock and audible alarm</a>
+            <a class="nav-link" href="#section_2">Keyboard shortcuts and key events</a>
+            <a class="nav-link" href="#section_3">Countdown timer</a>
+            <a class="nav-link" href="#section_4">Responsive design with JavaScript</a>
+            <a class="nav-link" href="#section_5">Responsive Tester</a>
+            <a class="nav-link" href="#section_6">Device Detection</a>
+            <a class="nav-link" href="#section_7">Network Status Detection</a>
+            <a class="nav-link" href="#section_8">Webcam Detection</a>
+            <a class="nav-link" href="#section_9">Geolocation</a>
+            <a class="nav-link" href="#section_10">Search Filters</a>
+            <a class="nav-link" href="#section_11">Digital Lottery</a>
+            <a class="nav-link" href="#section_12">Responsive Slider</a>
+            <a class="nav-link" href="#section_13">Scrollspy with Intersection Observer</a>
+            <a class="nav-link" href="#section_14">Autoplay Video</a>
+            <a class="nav-link" href="#section_15">Form Validation</a>
+            <a class="nav-link" href="#section_16">Text to Speech</a>
+            <br><br>
+        </div>
+    </div><!-- offcanvas -->
+    <header>
+        Header
+    </header>
+    <!-- HEADER -->
+    <main>
+        <section class="section-content" id="section_1">
+            <h2>Digital clock and audible alarm</h2>
+            <div class="js-clock" id="js-clock"></div>
+            <br>
+            <div class="algo">
+                <button class="btn" id="btn-start-clock">Start the clock</button>
+                <button class="btn" id="btn-stop-clock" disabled>Stop the clock</button>
+                <button class="btn" id="btn-start-alarm">Start the alarm</button>
+                <button class="btn" id="btn-stop-alarm" disabled>Stop the alarm</button>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_2">
+            <h2>Keyboard shortcuts and key events</h2>
+            <div class="game-area">
+                <div class="ball"></div>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_3">
+            <h2>Countdown timer</h2>
+            <div id="countdown"></div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_4">
+            <h2>Responsive design with JavaScript</h2>
+            <div class="responsive" id="youtube-iframe"></div>
+            <br>
+            <div class="responsive" id="maps-iframe"></div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_5">
+            <h2>Responsive Tester</h2>
+            <div class="form-container">
+                <form class="form-control" id="tester">
+                    <input class="mb-1" type="url" placeholder="Type the URL" name="url" id="url-test" required>
+                    <br>
+                    <input class="mb-1" type="text" placeholder="Type the width to test" name="width" id="width-test" required>
+                    <br>
+                    <input class="mb-1" type="text" placeholder="Type the height to test" name="height" id="height-test" required>
+                    <br>
+                    <button class="btn" type="submit">Test!</button> <button class="btn" id="close-test" name="closeTest" type="button">Close</button>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_6">
+            <h2>Device Detection<br>User Agent</h2>
+            <div>
+                <b>User Agent:</b>  <span id="user-agent-content"></span>
+                <br>
+                <b>Platform:</b> <span id="user-agent-platform"></span>
+                <br>
+                <b>Browser: </b> <span id="user-agent-browser"></span>
+                <br>
+                <mark><span id="user-agent-perBrowser"></span></mark>
+                <br>
+                <mark><span id="user-agent-perPlatform"></span></mark>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_7">
+            <h2>Network Status Detection</h2>
+            <div id="img-network"></div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_8">
+            <h2>Webcam Detection</h2>
+            <video class="webcam-video" id="video" autoplay></video>
+            <br>
+            <button class="btn" id="startButton">Start Webcam</button>
+        </section>
+        <hr>
+        <section class="section-content" id="section_9">
+            <h2>Geolocation</h2>
+            <div id="locationInfo"></div>
+            <button class="btn" id="getLocationButton">Get GeoData</button>
+        </section>
+        <hr>
+        <section class="section-content" id="section_10">
+            <h2>Search Filters</h2>
+            <input class="mb-1" placeholder="Search something..." type="text" name="searchIMG" id="search-image">
+            <div class="search-content">
+                <img class="img-search" src="https://loremflickr.com/320/240?random=1" alt="random uno" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=2" alt="random uno" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=3" alt="random dos" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=4" alt="random dos" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=5" alt="random tres" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=6" alt="random tres" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=7" alt="random cuatro" />
+                <img class="img-search" src="https://loremflickr.com/320/240?random=8" alt="random cuatro" />
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_11">
+            <h2>Digital Lottery</h2>
+            <button class="btn mb-1" id="lottery-button">Play!</button>
+            <div class="lottery-content" id="lottery-content"></div>
+            <span class="mt-1" id="lottery-prize"></span>
+        </section>
+        <hr>
+        <section class="section-content" id="section_12">
+            <h2>Responsive Slider</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <i class="fa-solid fa-angle-left slider-button slider-button-prev" id="prevBtn"></i>
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=1" alt="Imagen 1">
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=2" alt="Imagen 2">
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=3" alt="Imagen 3">
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=4" alt="Imagen 4">
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=5" alt="Imagen 5">
+                    <img src="https://loremflickr.com/g/1920/1080/space?random=6" alt="Imagen 6">
+                    <i class="fa-solid fa-angle-right slider-button slider-button-next" id="nextBtn"></i>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_13">
+            <h2>Scrollspy with Intersection Observer</h2>
+        </section>
+        <hr>
+        <section class="section-content" id="section_14">
+            <h2>Autoplay Video</h2>
+            <div class="video-content">
+                <video id="fancy-video" src="assets/video/bgvideo.mp4" controls autoplay loop muted></video>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_15">
+            <h2>Form Validation</h2>
+            <div class="form-container">
+                <form class="form-control" id="form-validation">
+                    <input type="text" placeholder="Type your name" name="name" id="validation-name" required>
+                    <span class="invalid-feedback" id="error-message-validation-name"></span>
+                    <br>
+                    <input class="mt-1" type="email" placeholder="Type the email" name="email" id="validation-email" required>
+                    <span class="invalid-feedback" id="error-message-validation-email"></span>
+                    <br>
+                    <input class="mt-1" type="text" placeholder="Type the subject" name="subject" id="validation-subject" required>
+                    <span class="invalid-feedback" id="error-message-validation-subject"></span>
+                    <br>
+                    <textarea class="mt-1" type="text" placeholder="Type your comment(255 characters max)" name="comment" id="validation-comments" required></textarea>
+                    <span class="invalid-feedback" id="error-message-validation-comments"></span>
+                    <br>
+                    <button class="btn mt-1" id="validation-submit" name="btnValidation" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="section-content" id="section_16">
+            <h2>Text to Speech</h2>
+            <form class="form-control" id="form-tts">
+                <select id="voice-select"></select>
+                <input class="mt-1" type="text" placeholder="Type the text" name="tts" id="tts-text" required>
+                <button class="btn mt-1" id="submit-tts" type="button">Speech!</button>
+            </form>
+        </section>
+    </main>
+    <!-- MAIN -->
+    <footer>
+        Copyright 2023 <i class="far fa-copyright" aria-hidden="true"></i> Luis Ronquillo
+    </footer>
+    <!-- FOOTER -->
+    <!--<button id="menu-button" class="btn btn-menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>-->
+    <button id="menu-button" class="hamburger hamburger--collapse btn-menu" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <button id="scrollTop" class="to-top" type="button">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <button id="darkmodeBtn" class="dark-light-btn darkOff" type="button">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="assets/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/cdd9656125.js" crossorigin="anonymous"></script>
+</body>
+</html>
