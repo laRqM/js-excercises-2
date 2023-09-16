@@ -1,4 +1,4 @@
-# JavaScript excercises
+# JavaScript exercises
 JavaScript's beginners exercises about DOM manipulation and the use of some APIs.
 
 Kindly reminder that this is the code from a beginner of JavaScript. Of course, it contains code that can be improved. I'm still learning, like everyone else 😬
