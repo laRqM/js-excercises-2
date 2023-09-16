@@ -1,0 +1,393 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.network-status.online {
+    background-color: green;
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    height: 6rem;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+}
+
+.network-status.offline {
+    background-color: red;
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    height: 6rem;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+}
+
+.offcanvas {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.offcanvas a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.offcanvas a:hover {
+    color: #007BFF;
+}
+
+.nav-link.active {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+.offcanvas .closebtn {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.offcanvas-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.offcanvas-footer {
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+/*.offcanvas-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    bottom: 0;
+}*/
+
+header {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* This causes the sections to stack vertically */
+}
+
+section {
+    height: 100vh; /* Each section occupies 100% of the screen */
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+/* GAME AREA - EXERCISE 3 */
+.game-area {
+    display: flex;
+    min-height: 50vh;
+    background-color: #0051A8;
+}
+
+.ball {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #FFA500;
+}
+
+.img-no-network {
+    max-width: 100%;
+}
+
+.webcam-video {
+    max-width: 100%;
+}
+
+.search-content,
+.lottery-content {
+    position: absolute;
+    left: 10rem;
+    right: 10rem;
+}
+
+.img-search,
+.img-lottery {
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-search:hover,
+.img-lottery:hover {
+    transform: scale(1.1);
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-button-prev {
+    left: 0;
+}
+
+.slider-button-next {
+    right: 0;
+}
+
+.slider-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .slider {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .slider {
+        flex-direction: row;
+    }
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+.btn-menu {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0 !important;
+    background-color: #007BFF !important;
+    z-index: 9999;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+    background-color: #0096c7 !important;
+    background-image: linear-gradient(315deg, #FFA500 0%, #ade8f4 74%) !important;
+}
+
+/*.btn-menu { ABANDONED. LEFT FOR REFERENCES
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+}*/
+
+/*.btn-menu:hover { ABANDONED. LEFT FOR REFERENCES
+    background-color: #0056b3;
+}*/
+
+.dark-light-btn {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.26);
+}
+
+.dark-light-btn:hover {
+    opacity: 0.7;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 6rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.26);
+}
+
+.to-top:hover {
+    opacity: 0.7;
+}
+
+/* BUTTON */
+.btn {
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 0.375rem;
+    border-color: #007BFF;
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+    line-height: 1.5;
+    border-width: 1px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4A90E2;
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.video-content video {
+    max-width: 100%;
+}
+
+.form-container {
+    max-width: 100%;
+}
+
+.form-control {
+    display: grid;
+    right: 30rem;
+    left: 30rem;
+    position: absolute;
+    max-width: 100%;
+}
+
+.form-control textarea {
+    resize: none;
+}
+
+.invalid-feedback {
+    background-color: lightcoral;
+    color: #fff;
+    font-size: 0.875rem;
+    display: none;
+}
+
+/* MISCELLANEOUS */
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #007BFF;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #007BFF;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+/* FIXES */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
